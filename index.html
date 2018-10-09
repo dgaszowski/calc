@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <!--  Meta  -->
+  <meta charset="UTF-8" />
+  <title>Calc v. 0.1</title>
+  
+  <!--  Styles  -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ 
+	<form>
+		<div class="inpt">
+			<input id="result" type="text">
+		</div>
+	  
+	 
+	  <div class="calc calc-top">
+		<div class="btn memory-btn">MC</div>
+		<div class="btn memory-btn">MR</div>
+		<div class="btn memory-btn">M+</div>
+		<div class="btn memory-btn">M-</div>
+		<div class="btn memory-btn">MS</div>
+	  </div>
+	  
+	  <div class="calc calc-main">
+		<div class="btn function-btn">%</div>
+		<div class="btn function-btn">sq</div>
+		<div class="btn function-btn">x^2</div>  
+		<div class="btn function-btn">1/x</div>
+		
+		<div class="btn cancel-btn">CE</div>
+		<div class="btn cancel-btn" onclick="resetValue()">C</div>
+		<div class="btn cancel-btn"><-</div>  
+		<div class="btn operand-btn">/</div>	
+		
+		<div class="btn number-btn" onclick="appendValue('7')">7</div>
+		<div class="btn number-btn" onclick="appendValue('8')">8</div>
+		<div class="btn number-btn" onclick="appendValue('9')">9</div>  
+		<div class="btn operand-btn" onclick="appendValue('*')">*</div>
+		
+		<div class="btn number-btn" onclick="appendValue('4')">4</div>
+		<div class="btn number-btn" onclick="appendValue('5')">5</div>
+		<div class="btn number-btn" onclick="appendValue('6')">6</div>  
+		<div class="btn operand-btn" onclick="appendValue('-')">-</div>
+		
+		<div class="btn number-btn" onclick="appendValue('1')">1</div>
+		<div class="btn number-btn" onclick="appendValue('2')">2</div>
+		<div class="btn number-btn" onclick="appendValue('3')">3</div> 
+		<div class="btn operand-btn" onclick="appendValue('+')">+</div>
+		
+		<div class="btn operand-btn">+/-</div>
+		<div class="btn number-btn" onclick="appendValue('0')">0</div>
+		<div class="btn operand-btn" onclick="appendValue(',')">,</div> 
+		<div class="btn equal-btn">=</div>	
+	  </div>
+</form>
+
+  <script src="script.js"></script>
+  <script>document.onload = resetValue();</script>
+</body>
+</html>
