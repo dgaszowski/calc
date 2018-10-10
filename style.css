@@ -1,17 +1,12 @@
 .calc {
 	display: grid;
+	grid-template-columns: auto auto auto auto auto;
+	padding: 10px;
 }
 
 .calc-top {
-  grid-template-columns: auto auto auto auto auto;
-  margin-top: 50px;
-  padding: 10px;
-}
-
-.calc-main {
-  grid-template-columns: auto auto auto auto;
   
-  padding: 10px;
+  margin-top: 50px;
 }
 
 .btn {
@@ -61,9 +56,11 @@
 }
 
 body {
-	text-align: center;
+	/*text-align: center;*/
 	font-family: courier; 
 	background-color: black;
+	margin-left: 10%;
+	margin-top: 5%;
 }
 
 input {
@@ -77,5 +74,5 @@ form {
 	background-color: #E8EAEE;
 	padding: 2%;
 	width: 35%;
-	align: center;
+	text-align: center;
 }

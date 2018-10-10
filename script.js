@@ -1,23 +1,4 @@
 
-class Calc {
-	constructor() {
-		this.value = 0;
-		this.register = 0;
-		this.operation = "";
-		this.memory = [];
-	}
-	
-	execute() {
-	}
-	
-	c() {
-	}
-	
-	ce() {
-	}
-}
-
-
 function getValue() {
 	return document.getElementById("result").value;
 }
