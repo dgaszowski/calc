@@ -83,9 +83,7 @@ form.main-panel {
 	width: 50%;
 	min-width: 300px;
 	margin-left: 20px;
-	position: reltive;
-	
-	left: 700px;
+	position: relative;
 	text-align: left;
 	padding-left: 3%;
 	cursor: default;
