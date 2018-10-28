@@ -12,13 +12,11 @@
 </head>
 
 <body>
- 
-	<form>
+	<form class="main-panel">
 		<div class="inpt">
 			<input id="result" type="text">
 		</div>
 	  
-	 
 	  <div class="calc">
 		<div class="btn memory-btn">MC</div>
 		<div class="btn memory-btn">MR</div>
@@ -26,31 +24,31 @@
 		<div class="btn memory-btn">M-</div>
 		<div class="btn memory-btn">MS</div>
 
-		<div class="btn operand-btn">x&sup2;</div>
-		<div class="btn operand-btn">x<sup>y</sup></div>
-		<div class="btn operand-btn">sin</div>  
-		<div class="btn operand-btn">cos</div>			
-		<div class="btn operand-btn">tan</div>
+		<div class="btn operand-btn" onclick="appendValue('sqr(')">x&sup2;</div>
+		<div class="btn operand-btn" onclick="appendValue('pow(')">x<sup>y</sup></div>
+		<div class="btn operand-btn" onclick="appendValue('sin(')">sin</div>  
+		<div class="btn operand-btn" onclick="appendValue('cos(')">cos</div>			
+		<div class="btn operand-btn" onclick="appendValue('tan(')">tan</div>
 
-		<div class="btn operand-btn">&radic;</div>
-		<div class="btn operand-btn">10<sup>x</sup></div>
-		<div class="btn operand-btn">log</div>  
-		<div class="btn operand-btn">exp</div>			
-		<div class="btn operand-btn">mod</div>
+		<div class="btn operand-btn" onclick="appendValue('sqrt(')">&radic;</div>
+		<div class="btn operand-btn" onclick="appendValue('pow(10,')">10<sup>x</sup></div>
+		<div class="btn operand-btn" onclick="appendValue('log(')">log</div>  
+		<div class="btn operand-btn" onclick="appendValue('exp(')">exp</div>			
+		<div class="btn operand-btn" onclick="appendValue('mod(')">mod</div>
 
-		<div class="btn operand-btn">&uarr;</div>
+		<div class="btn operand-btn" onclick="notYetImplemented()">&uarr;</div>
 		<div class="btn operand-btn">CE</div>
-		<div class="btn operand-btn">C</div>  
-		<div class="btn operand-btn">&lArr;</div>			
-		<div class="btn operand-btn">&divide;</div>
+		<div class="btn operand-btn" onclick="resetValue()">C</div>  
+		<div class="btn operand-btn" onclick="backspace()">&lArr;</div>			
+		<div class="btn operand-btn" onclick="appendValue('/')">&divide;</div>
 
-		<div class="btn operand-btn">&pi;</div>
+		<div class="btn operand-btn" onclick="appendValue('&Pi;')">&pi;</div>
 		<div class="btn number-btn" onclick="appendValue('7')">7</div>
 		<div class="btn number-btn" onclick="appendValue('8')">8</div>
 		<div class="btn number-btn" onclick="appendValue('9')">9</div>  
 		<div class="btn operand-btn" onclick="appendValue('*')">*</div>
 
-		<div class="btn operand-btn">n!</div>
+		<div class="btn operand-btn" onclick="appendValue('fact(')">n!</div>
 		<div class="btn number-btn" onclick="appendValue('4')">4</div>
 		<div class="btn number-btn" onclick="appendValue('5')">5</div>
 		<div class="btn number-btn" onclick="appendValue('6')">6</div>  
@@ -62,15 +60,28 @@
 		<div class="btn number-btn" onclick="appendValue('3')">3</div> 
 		<div class="btn operand-btn" onclick="appendValue('+')">&plus;</div>
 		
-		<div class="btn operand-btn">(</div>
-		<div class="btn operand-btn">)</div>
+		<div class="btn operand-btn" onclick="appendValue('(')">(</div>
+		<div class="btn operand-btn" onclick="appendValue(')')">)</div>
 		<div class="btn number-btn" onclick="appendValue('0')">0</div>
-		<div class="btn operand-btn" onclick="appendValue(',')">,</div> 
-		<div class="btn operand-btn">&equals;</div>
+		<div class="btn operand-btn" onclick="appendValue('.')">,</div> 
+		<div class="btn operand-btn" onclick="calculate()">&equals;</div>
 
 	  </div>
 </form>
 
+<form class="side-panel">
+	<div class="side-panel-menu">
+		<p id="history-panel" onclick="displayHistoryPanel();">History</p>
+		<p id="memory-panel" onclick="displayMemoryPanel();">Memory</p>						
+	</div>
+
+	<div class="side-panel-content" id="hist">			
+	</div>
+
+	<div class="side-panel-content" id="mem">
+	</div>
+</form>
+  <script src="history.js"></script>
   <script src="script.js"></script>
   <script>document.onload = resetValue();</script>
 </body>

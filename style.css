@@ -65,10 +65,50 @@ input {
 }
 
 form {
-	display: inline-block;
 	background-color: #4d5359;
+	display: inline-block;
+	text-align: center;
+}
+
+form.main-panel {	
 	padding: 2%;
 	width: 30%;
 	min-width: 350px;
-	text-align: center;
+	position: absolute;
+	top: 75px;
 }
+
+.side-panel {
+	display: inline-block;
+	width: 50%;
+	min-width: 300px;
+	margin-left: 20px;
+	position: absolute;
+	top: 75px;
+	left: 700px;
+	text-align: left;
+	padding-left: 3%;
+	cursor: default;
+}
+
+.side-panel-menu {
+	display: grid;
+	grid-template-columns: auto auto;
+	cursor: pointer;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.side-panel-content {
+	display: grid;
+	grid-template-columns: auto;
+}
+
+.history-entry {
+	margin-right: 10px;
+	font-family: 'Courier New', Courier, monospace;
+	border-width: 1px;
+	border-bottom: #0c0e10;
+	border-bottom-style: dotted;
+}
+
