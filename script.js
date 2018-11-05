@@ -1,5 +1,6 @@
 
 var historyArray = [];
+var memoryArray = [];
 
 function getValue() {
 	return document.getElementById("result").value;
@@ -116,13 +117,25 @@ function showPanelContent(val) {
 	document.getElementById(val).style.display = "grid";
 }
 
+function hideMenu(menuID) {
+	document.getElementById(menuID).setAttribute("class", "side-panel-hidden-menu")
+} 
+
+function showMenu(menuID) {
+	document.getElementById(menuID).removeAttribute("class");
+}
+
 function hideHistoryPanel() {
 	hidePanelContent("hist");
+	hideMenu("history-panel");
+	showMenu("memory-panel");
 	showPanelContent("mem");
 }
 
 function hideMemoryPanel() {
 	hidePanelContent("mem");
+	hideMenu("memory-panel");
+	showMenu("history-panel");
 	showPanelContent("hist");
 }
 
@@ -157,4 +170,8 @@ function refreshHistory() {
 	else {
 		document.getElementById("history-panel").innerText = "History"
 	}
+}
+
+function clearMemory() {
+	delete memoryArray;
 }
